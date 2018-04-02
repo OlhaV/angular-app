@@ -1,11 +1,21 @@
+@import "./../../assets/colors.less";
+
 .menu {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  height: 70px;
+  background-color: @menu-background-color;
 
   &__link {
     margin-right: 20px;
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 14px;
+    color: @menu-link-color;
+
+    &:link, &:visited, &:active {
+      color: @menu-link-color;
+    }
   }
 }
