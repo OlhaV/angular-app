@@ -1,0 +1,42 @@
+@import "./../../assets/colors";
+
+.main-page {
+  display: flex;
+
+  &__pizza-card {
+    min-height: 200px;
+    background-color: @pizza-card-color;
+    margin: 10px;
+    flex: 1 1 40%;
+    padding: 15px;
+
+    &:hover {
+      box-shadow: 0 0 21px 4px rgba(17, 52, 80, 0.22);
+    }
+
+    &-details {
+      min-height: 100px;
+    }
+
+    &-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 200px;
+      }
+    }
+
+    &-name {
+      text-transform: uppercase;
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+    }
+  }
+}

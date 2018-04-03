@@ -6,7 +6,7 @@ import {MainPageComponent} from "./modules/main-page/main-page.component";
 import {CartPageComponent} from "./modules/cart-page/cart-page.component";
 import {HistoryPageComponent} from "./modules/history-page/history-page.component";
 import {AppRoutingModule} from './app-routing.module';
-import { MenuComponent } from './components/menu/menu.component';
+import {ComponentsModule} from './components/components.module';
 
 
 @NgModule({
@@ -14,12 +14,12 @@ import { MenuComponent } from './components/menu/menu.component';
     AppComponent,
     CartPageComponent,
     HistoryPageComponent,
-    MainPageComponent,
-    MenuComponent
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
