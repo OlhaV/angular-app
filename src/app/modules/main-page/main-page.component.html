@@ -21,7 +21,8 @@
         <img src={{pizza.image}} alt="pizza">
       </div>
       <div class="main-page__pizza-card-button">
-        <app-button></app-button>
+        <app-button (onButtonClick)="_buttonClickHandler($event)"
+        ></app-button>
       </div>
     </ng-container>
   </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {OrderList} from "../../models/orderList";
 
 @Component({
   selector: 'app-history-page',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoryPageComponent implements OnInit {
 
+  _orderList: OrderList;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  _getDate(): string {
+     return "";
+  }
+
+  _getItems(): string {
+    return "";
   }
 
 }

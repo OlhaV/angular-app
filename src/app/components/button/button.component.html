@@ -1,1 +1,8 @@
-<div class="button"> add to cart </div>
+<div class="button"
+     [class._pushed]="_pushed"
+     (click)="onButtonClick.emit($event)"
+     (mousedown)="_pushed = true"
+     (mouseup)="_pushed = false"
+>
+  add to cart
+</div>

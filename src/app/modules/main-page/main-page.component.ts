@@ -36,4 +36,8 @@ export class MainPageComponent implements OnInit {
     });
     return this._indredients;
   }
+
+  _buttonClickHandler(e) {
+    console.log(e);
+  }
 }
