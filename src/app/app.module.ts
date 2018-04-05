@@ -7,6 +7,9 @@ import {CartPageComponent} from "./modules/cart-page/cart-page.component";
 import {HistoryPageComponent} from "./modules/history-page/history-page.component";
 import {AppRoutingModule} from './app-routing.module';
 import {ComponentsModule} from './components/components.module';
+import {DataService} from "./modules/data.service";
+import {AsyncLocalStorageModule} from "angular-async-local-storage";
+import {LocalStorageModule} from "angular-2-local-storage";
 
 
 @NgModule({
@@ -17,11 +20,16 @@ import {ComponentsModule} from './components/components.module';
     MainPageComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    ComponentsModule
+    AsyncLocalStorageModule,
+    BrowserModule,
+    ComponentsModule,
+    LocalStorageModule.withConfig({
+      prefix: "app",
+      storageType: 'localStorage'
+    })
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

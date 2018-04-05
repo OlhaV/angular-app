@@ -1,3 +1,10 @@
-<p>
-  Your order:
-</p>
+<div>
+  <div> Your order: </div>
+  <div *ngFor="let pizza of _chosenPizzas">
+    <div> {{pizza.name}} </div>
+  </div>
+  <div>
+    <span> Total sum: </span>
+    <span> {{_totalSum}} $ </span>
+  </div>
+</div>

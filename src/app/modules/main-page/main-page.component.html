@@ -1,29 +1,14 @@
 <div class="main-page">
-  <div *ngFor="let pizza of _defaultPizzas; let i = index"
+  <div *ngFor="let pizza of _pizzas; let i = index"
        class="main-page__pizza-card"
   >
     <ng-container>
-      <div class="main-page__pizza-card-details">
-        <div class="main-page__pizza-card-number">
-          #{{i + 1}}
-        </div>
-        <div class="main-page__pizza-card-name">
-          {{pizza.name}}
-        </div>
-        <div class="main-page__pizza-card-ingredients">
-          Ingredients: {{_getIngredients(i)}}
-        </div>
-        <div class="main-page__pizza-card-price">
-          Price: {{pizza.price}} $
-        </div>
-      </div>
-      <div class="main-page__pizza-card-image">
-        <img src={{pizza.image}} alt="pizza">
-      </div>
-      <div class="main-page__pizza-card-button">
-        <app-button (onButtonClick)="_buttonClickHandler($event)"
-        ></app-button>
-      </div>
+      <app-card
+        [card]="pizza"
+        [index]="i"
+        [ingredients]="_getIngredients(i)"
+        (buttonClickHandler)="_addToCart(i)"
+      ></app-card>
     </ng-container>
   </div>
 </div>

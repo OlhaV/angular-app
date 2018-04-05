@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Pizza} from "../../models/pizza.model";
+import {DataService} from "../data.service";
 
 @Component({
   selector: 'app-cart-page',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartPageComponent implements OnInit {
 
-  constructor() { }
+  _chosenPizzas: Pizza[] = [];
+  _totalSum: number = 0;
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this._chosenPizzas = this.dataService.getChosenPizzas();
+    this._getTotalSum();
   }
 
+  _getTotalSum() {
+    this._totalSum = 0;
+    this._chosenPizzas.map((pizza) => {
+      this._totalSum += pizza.price;
+    });
+    return this._totalSum;
+  }
 }
