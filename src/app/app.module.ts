@@ -8,7 +8,6 @@ import {HistoryPageComponent} from "./modules/history-page/history-page.componen
 import {AppRoutingModule} from './app-routing.module';
 import {ComponentsModule} from './components/components.module';
 import {DataService} from "./modules/data.service";
-import {AsyncLocalStorageModule} from "angular-async-local-storage";
 import {LocalStorageModule} from "angular-2-local-storage";
 
 
@@ -21,7 +20,6 @@ import {LocalStorageModule} from "angular-2-local-storage";
   ],
   imports: [
     AppRoutingModule,
-    AsyncLocalStorageModule,
     BrowserModule,
     ComponentsModule,
     LocalStorageModule.withConfig({

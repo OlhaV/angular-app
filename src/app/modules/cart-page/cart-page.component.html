@@ -1,10 +1,22 @@
-<div>
-  <div> Your order: </div>
-  <div *ngFor="let pizza of _chosenPizzas">
-    <div> {{pizza.name}} </div>
+<div class="cart">
+  <div class="cart__header"> Your order: </div>
+  <div class="cart__order"
+       *ngFor="let pizza of _chosenPizzas"
+  >
+    <div class="cart__order-pizza">
+      <img class="cart__order-pizza-image"
+        src={{pizza.image}}
+      >
+      <div class="cart__order-pizza-name">
+        Pizza {{pizza.name}}
+      </div>
+      <div class="cart__order-pizza-price">
+        {{pizza.price}}$
+      </div>
+    </div>
   </div>
-  <div>
+  <div class="cart__total">
     <span> Total sum: </span>
-    <span> {{_totalSum}} $ </span>
+    <span> {{_totalSum}}$ </span>
   </div>
 </div>

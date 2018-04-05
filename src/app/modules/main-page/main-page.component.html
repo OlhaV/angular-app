@@ -2,13 +2,11 @@
   <div *ngFor="let pizza of _pizzas; let i = index"
        class="main-page__pizza-card"
   >
-    <ng-container>
-      <app-card
-        [card]="pizza"
-        [index]="i"
-        [ingredients]="_getIngredients(i)"
-        (buttonClickHandler)="_addToCart(i)"
-      ></app-card>
-    </ng-container>
+    <app-card
+      [card]="pizza"
+      [index]="i"
+      [ingredients]="_getIngredients(i)"
+      (buttonClickHandler)="_addToCart(i)"
+    ></app-card>
   </div>
 </div>

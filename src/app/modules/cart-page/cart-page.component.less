@@ -1,0 +1,29 @@
+.cart {
+  margin: 10px;
+
+  &__order {
+    margin: 10px 0;
+
+    &-pizza {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      border-bottom: solid 1px grey;
+      padding: 15px 0;
+
+      &-image {
+        width: 70px;
+        height: 70px;
+      }
+
+      &-name, &-price {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &__header, &__total {
+    font-size: 18px;
+    margin: 15px 0;
+  }
+}
