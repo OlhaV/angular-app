@@ -1,5 +1,12 @@
 <div class="cart">
   <div class="cart__header"> Your order: </div>
+  <div class="cart__subheader"
+       *ngIf="_cartNotEmpty"
+  >
+    <div class="cart__subheader-name"> Name </div>
+    <div class="cart__subheader-amount"> Amount </div>
+    <div class="cart__subheader-price"> Price </div>
+  </div>
   <div class="cart__order"
        *ngFor="let pizza of _chosenPizzas"
   >
@@ -9,6 +16,9 @@
       >
       <div class="cart__order-pizza-name">
         Pizza {{pizza.name}}
+      </div>
+      <div class="cart__order-pizza-amount">
+        {{pizza.amount}}
       </div>
       <div class="cart__order-pizza-price">
         {{pizza.price}}$
